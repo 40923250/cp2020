@@ -82,8 +82,8 @@
 <p></p>
 <p></p>
 <p>Stage the<span> </span><code>.gitmodules</code><span> </span>changes:</p>
-<p><span style="background-color: #ccffff;"><code>git add .gitmodules</code></span></p>
-<p><span face="monospace" style="font-family: monospace; color: #800000;">以 <span style="background-color: #ccffff;">git add .gitmodules</span> 使git追蹤變更後的 .gitmodules</span></p>
+<p><code>git add .gitmodules</code></p>
+<p><span face="monospace" style="font-family: monospace; color: #800000;">以 git add .gitmodules 使git追蹤變更後的 .gitmodules</span></p>
 <p><span face="monospace" style="font-family: monospace; color: #800000;"><img alt="" height="247" src="/images/cmd_30TOkiw1Ip.png" width="500"/></span></p>
 <p></p>
 <p></p>
@@ -93,29 +93,29 @@
 <p></p>
 <p></p>
 <p>Remove the submodule files from the working tree and index:<br/><span></span></p>
-<p><span style="background-color: #ccffff;"><code>git rm --cached path_to_submodule</code> (no trailing slash)</span>.</p>
-<p><span style="color: #800000;">以 <span style="background-color: #ccffff;">git rm --cached cmsimde(submodule名稱)</span>刪除 submodule</span></p>
+<p><code>git rm --cached path_to_submodule</code> (no trailing slash).</p>
+<p><span style="color: #800000;">以 git rm --cached cmsimde(submodule名稱)刪除 submodule</span></p>
 <p><span style="color: #800000;"><img alt="" height="247" src="/images/cmd_e7kv4fMiQP.png" width="500"/></span></p>
 <p></p>
 <p></p>
 <p>Remove the submodule's<span> </span><code>.git</code><span> </span>directory:</p>
-<p><span style="background-color: #ccffff;"><code>rm -rf .git/modules/path_to_submodule</code></span></p>
+<p><code>rm -rf .git/modules/path_to_submodule</code></p>
 <p><code>這個我無法執行，但把倉儲目錄中的submodule(cmsimde)資料夾整個刪掉就好，<span style="color: #ff0000;">警告!若是編輯完頁面push時出現問題才來刪的話，cmsimde資料夾內包含還未push上去的東西</span></code></p>
 <p><img alt="" height="314" src="/images/explorer_yVALFIazL1.png" width="500"/></p>
 <p>補充:先將 .git\modules\cmsimde 備份起來後刪掉，然後第7點我沒做</p>
 <p></p>
 <p></p>
 <p>Commit the changes:</p>
-<p><span style="background-color: #ccffff;"><code>git commit -m "Removed submodule &lt;name&gt;"</code></span></p>
-<p><span style="color: #800000;"><code>用 <span style="background-color: #ccffff;">git commit -m "你剛幹了啥"</span> 提交</code></span></p>
+<p><code>git commit -m "Removed submodule &lt;name&gt;"</code></p>
+<p><span style="color: #800000;"><code>用 git commit -m "你剛幹了啥" 提交</code></span></p>
 <p><span style="color: #800000;"><code><img alt="" height="247" src="/images/cmd_ORtMjHkpmc.png" width="500"/></code></span></p>
 <p><code></code></p>
 <p><code></code></p>
 <p><span style="color: #000000;"><code>刪除到了這邊就結束了，要再添加submodule的話就打:</code></span></p>
-<p><span style="color: #000000; background-color: #ccffff;"><code>git submodule add <a href="https://github.com/mdecourse/cmsimde.git" style="color: #000000; background-color: #ccffff;">https://github.com/mdecourse/cmsimde.git</a> cmsimde</code></span></p>
-<p><span style="color: #000000;"><code>之後再<span style="background-color: #ccffff;">git commit -m "submodule add"</span></code></span></p>
+<p><span style="color: #000000;"><code>git submodule add <a href="https://github.com/mdecourse/cmsimde.git" style="color: #000000;">https://github.com/mdecourse/cmsimde.git</a> cmsimde</code></span></p>
+<p><span style="color: #000000;"><code>之後再git commit -m "submodule add"</code></span></p>
 <p><span style="color: #000000;"><code>最後push上去</code></span></p>
-<p><code></code></p>
+<p><span style="color: #ff0000;"><code></code></span></p>
 <p><code></code></p>
 <p><code></code></p>
 <p><code></code></p>

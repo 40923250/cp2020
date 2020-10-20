@@ -5,7 +5,7 @@
 <p>PCH18:Laptop and Notebook Component Replacement</p>
 <p>        1:<span>Laptop and Notebook Component Replacement</span></p>
 <p>        2:Troubleshooting Hard Drives</p>
-<h3>Laptop and Notebook Component Replacement</h3>
+<h3>&lt; Laptop and Notebook Component Replacement &gt;</h3>
 <p>筆記型電腦及其零件更換</p>
 <p><span style="color: #ff6600;"><strong>overview</strong></span></p>
 <p>In this module, we will discuss the types of hard drives used in laptop computers, as well as how to replace or upgrade them. We will also discuss the types of memory used in laptop and notebook computers, and the difference between upgrading laptop or notebook memory and upgrading memory in a standard desktop computer. Lastly, we will discuss the types of hard drive failure you may experience with a notebook computer and the best way to identify the failure and repair it properly.</p>
@@ -43,7 +43,7 @@
 <p lang=""></p>
 <p lang=""><span>Some laptops have a single memory slot, while others have two slots. Some laptops may have their memory soldered onto the motherboard, making upgrading or removing the memory impossible. Always check your laptop’s manual for details on how many modules your laptop will accept (if any), how many gigabytes they can be, and the speed of the modules. For example, in the bottom image below, we see a 2 GB DDR2 memory module that operates at 6400 MBps, or 800 MHz.</span></p>
 <p lang=""><span>一些筆記本電腦只有一個內存插槽，而其他筆記本電腦有兩個插槽。 一些筆記本電腦的內存可能焊接在主板上，因此無法升級或刪除內存。 請始終查看筆記本電腦的手冊，以獲取有關筆記本電腦可以容納多少個模塊（如果有），可以容納多少GB以及模塊速度的詳細信息。 例如，在下面的下圖中，我們看到一個2 GB DDR2內存模塊，其工作頻率為6400 MBps或800 MHz。<img alt="" src="/images/index.html"/></span></p>
-<h3><span>Troubleshooting Hard Drives</span></h3>
+<h3><span>&lt; Troubleshooting Hard Drives &gt;</span></h3>
 <p><span>To be continue...</span></p>
 <h2>PCH19</h2>
 <p>PCH19:Notebook Power and Physical Security</p>
@@ -51,15 +51,16 @@
 <p>        2:AC Power</p>
 <p>        3:Proper Disposal Procedures</p>
 <p>        4:Security</p>
-<h3>Overview</h3>
+<h3>&lt; Overview &gt;</h3>
 <p><span>To be continue...</span></p>
-<h3>AC Power</h3>
+<h3>&lt; AC Power &gt;</h3>
 <p><span>To be continue...</span></p>
-<h3>Proper Disposal Procedures</h3>
+<h3>&lt; Proper Disposal Procedures &gt;</h3>
 <p><span>To be continue...</span></p>
-<h3><span>Security</span></h3>
+<h3><span>&lt; Security &gt;</span></h3>
 <p><span>To be continue...</span></p>
 <h1>學習日記</h1>
+<p>刪除submodule</p>
 <h2>刪除submodule</h2>
 <p>參考資料:https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule</p>
 <p><span style="color: #ff6600;"><strong>To remove a submodule you need to:</strong></span></p>
@@ -81,8 +82,8 @@
 <p></p>
 <p></p>
 <p>Stage the<span> </span><code>.gitmodules</code><span> </span>changes:</p>
-<p><span style="background-color: #ccffff;"><code>git add .gitmodules</code></span></p>
-<p><span face="monospace" style="font-family: monospace; color: #800000;">以 <span style="background-color: #ccffff;">git add .gitmodules</span> 使git追蹤變更後的 .gitmodules</span></p>
+<p><code>git add .gitmodules</code></p>
+<p><span face="monospace" style="font-family: monospace; color: #800000;">以 git add .gitmodules 使git追蹤變更後的 .gitmodules</span></p>
 <p><span face="monospace" style="font-family: monospace; color: #800000;"><img alt="" height="247" src="/images/cmd_30TOkiw1Ip.png" width="500"/></span></p>
 <p></p>
 <p></p>
@@ -92,29 +93,29 @@
 <p></p>
 <p></p>
 <p>Remove the submodule files from the working tree and index:<br/><span></span></p>
-<p><span style="background-color: #ccffff;"><code>git rm --cached path_to_submodule</code> (no trailing slash)</span>.</p>
-<p><span style="color: #800000;">以 <span style="background-color: #ccffff;">git rm --cached cmsimde(submodule名稱)</span>刪除 submodule</span></p>
+<p><code>git rm --cached path_to_submodule</code> (no trailing slash).</p>
+<p><span style="color: #800000;">以 git rm --cached cmsimde(submodule名稱)刪除 submodule</span></p>
 <p><span style="color: #800000;"><img alt="" height="247" src="/images/cmd_e7kv4fMiQP.png" width="500"/></span></p>
 <p></p>
 <p></p>
 <p>Remove the submodule's<span> </span><code>.git</code><span> </span>directory:</p>
-<p><span style="background-color: #ccffff;"><code>rm -rf .git/modules/path_to_submodule</code></span></p>
+<p><code>rm -rf .git/modules/path_to_submodule</code></p>
 <p><code>這個我無法執行，但把倉儲目錄中的submodule(cmsimde)資料夾整個刪掉就好，<span style="color: #ff0000;">警告!若是編輯完頁面push時出現問題才來刪的話，cmsimde資料夾內包含還未push上去的東西</span></code></p>
 <p><img alt="" height="314" src="/images/explorer_yVALFIazL1.png" width="500"/></p>
 <p>補充:先將 .git\modules\cmsimde 備份起來後刪掉，然後第7點我沒做</p>
 <p></p>
 <p></p>
 <p>Commit the changes:</p>
-<p><span style="background-color: #ccffff;"><code>git commit -m "Removed submodule &lt;name&gt;"</code></span></p>
-<p><span style="color: #800000;"><code>用 <span style="background-color: #ccffff;">git commit -m "你剛幹了啥"</span> 提交</code></span></p>
+<p><code>git commit -m "Removed submodule &lt;name&gt;"</code></p>
+<p><span style="color: #800000;"><code>用 git commit -m "你剛幹了啥" 提交</code></span></p>
 <p><span style="color: #800000;"><code><img alt="" height="247" src="/images/cmd_ORtMjHkpmc.png" width="500"/></code></span></p>
 <p><code></code></p>
 <p><code></code></p>
 <p><span style="color: #000000;"><code>刪除到了這邊就結束了，要再添加submodule的話就打:</code></span></p>
-<p><span style="color: #000000; background-color: #ccffff;"><code>git submodule add <a href="https://github.com/mdecourse/cmsimde.git" style="color: #000000; background-color: #ccffff;">https://github.com/mdecourse/cmsimde.git</a> cmsimde</code></span></p>
-<p><span style="color: #000000;"><code>之後再<span style="background-color: #ccffff;">git commit -m "submodule add"</span></code></span></p>
+<p><span style="color: #000000;"><code>git submodule add <a href="https://github.com/mdecourse/cmsimde.git" style="color: #000000;">https://github.com/mdecourse/cmsimde.git</a> cmsimde</code></span></p>
+<p><span style="color: #000000;"><code>之後再git commit -m "submodule add"</code></span></p>
 <p><span style="color: #000000;"><code>最後push上去</code></span></p>
-<p><code></code></p>
+<p><span style="color: #ff0000;"><code></code></span></p>
 <p><code></code></p>
 <p><code></code></p>
 <p><code></code></p>
