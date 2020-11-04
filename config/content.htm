@@ -200,6 +200,110 @@
 <p><span style="color: #000000;"><code>然後....就沒有然後了</code></span></p>
 <p><span style="color: #000000;"><code><img alt="" height="302" src="/images/RxSRc8H.png" width="300"/></code></span></p>
 <h1><span style="color: #000000;"><code>FT</code></span></h1>
+<h1><span style="color: #000000;"><code>python</code></span></h1>
+<h2><span style="color: #000000;"><code>Variables 變數</code></span></h2>
+<p><span style="color: #ff6600;"><strong><code>Variables，expressions，and statements Values and types</code></strong></span></p>
+<p><span style="color: #ff6600;"><strong><code></code></strong></span></p>
+<p>A<span> </span><em>value</em><span> </span>is one of the basic things a program works with, like a letter or a number. The values we have seen so far are<span> </span><code>1</code>,<span> </span><code>2</code>, and "Hello, World!"</p>
+<p>These values belong to different <em>types</em>: <code>2</code> is an integer, and "Hello, World!" is a <em>string</em>, so called because it contains a "string" of letters. You (and the interpreter) can identify strings because they are enclosed in quotation marks.</p>
+<p></p>
+<p>值是程序使用的基本內容之一，例如字母或數字。到目前為止，我們看到的值為1、2和“ Hello，World！”。</p>
+<p>這些值屬於不同的類型：2是整數，“ Hello，World！” 是字符串，之所以稱為字符串是因為它包含字母的“字符串”。您（和解釋器）可以識別字符串，因為它們用引號引起來。</p>
+<p></p>
+<p>The<span> </span><code>print</code><span> </span>statement also works for integers. We use the<span> </span><code>python</code><span> </span>command to start the interpreter.</p>
+<p>print語句也適用於整數。我們使用python命令啟動解釋器。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python
+&gt;&gt;&gt; print(4)
+4</pre>
+<pre class="sourceCode python"><span>If you are not sure what type a value has, the interpreter can tell you.<br/><br/></span>Not surprisingly, strings belong to the type str and integers belong to the type<br/> int. Less obviously, numbers with a decimal point belong to a type called float<br/>, because these numbers are represented in a format called floating point.<br/><br/><br/>如果您不確定值的類型，解釋器可以告訴您。<br/><br/>毫不奇怪，字符串屬於str類型，而整數屬於int類型。不太明顯的是，帶小數點的數字屬於稱為浮<br/>點的類型，因為這些數字以稱為浮點的格式表示。<br/><br/><span><br/>What about values like "17" and "3.2"? They look like numbers, but they are in q<br/>uotation marks like strings.<br/><br/><br/><br/>They're strings.<br/></span></pre>
+<p>When you type a large integer, you might be tempted to use commas between groups of three digits, as in<span> </span><code>1,000,000</code>. This is not a legal integer in Python, but it is legal:</p>
+<p></p>
+<p>那麼“ 17”和“ 3.2”之類的值呢？ 它們看起來像數字，但用引號引起來，如字符串。</p>
+<p>他們是字符串。<br/>當您鍵入一個大整數時，您可能會想在三位數的組之間使用逗號，例如1,000,000。 在Python中這不是合法的整數，但它是合法的：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;&gt;&gt; print(1,000,000)
+1 0 0
+&gt;&gt;&gt; 
+Connection to server timed out. Run trinket again to reconnect.</pre>
+<pre class="jqconsole jqconsole-blurred"><br/><span>Well, that's not what we expected at all! Python interprets </span><code>1,000,000</code><span><span> </span>as a comma-sepa<br/>rated sequence of integers, which it prints with spaces between.<br/><br/></span>This is the first example we have seen of a semantic error: the code runs without producing an error message, but it doesn't do the "right" thing.</pre>
+<p></p>
+<p></p>
+<p>好吧，這根本不是我們所期望的！ Python將1,000,000解釋為以逗號分隔的整數序列，並在其之間打印出<br/>空格。</p>
+<p>這是我們看到的第一個語義錯誤示例：代碼運行時未產生錯誤消息，但沒有做“正確的”事情。</p>
+<p></p>
+<p><span style="color: #ff6600;"><strong>Variables</strong></span></p>
+<p></p>
+<p>One of the most powerful features of a programming language is the ability to manipulate<span> </span><em>variables</em>. A variable is a name that refers to a value.</p>
+<p>An<span> </span><em>assignment statement</em><span> </span>creates new variables and gives them values:</p>
+<p></p>
+<p>編程語言最強大的功能之一就是能夠操縱變量。 變量是引用值的名稱。</p>
+<p>賦值語句創建新變量並為其提供值：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;&gt;&gt; message = 'And now for something completely different'
+&gt;&gt;&gt; n = 17
+&gt;&gt;&gt; pi = 3.1415926535897931</pre>
+<pre class="sourceCode python"></pre>
+<p></p>
+<p>This example makes three assignments. The first assigns a string to a new variable named<span> </span><code>message</code>; the second assigns the integer<span> </span><code>17</code><span> </span>to<span> </span><code>n</code>; the third assigns the (approximate) value of<span> </span><span class="math"><em>π</em></span><span> </span>to<span> </span><code>pi</code>.</p>
+<p>To display the value of a variable, you can use a print statement:</p>
+<pre class="jqconsole jqconsole-blurred"><span><br/>本示例進行了三個分配。 第一個將字符串分配給一個名為message的新變量； 第二個將整數17分配<br/>給n； 第三個將π的（近似）值分配給pi。<br/><br/>要顯示變量的值，可以使用打印語句：<br/></span></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;&gt;&gt; print(n)
+17
+&gt;&gt;&gt; print(pi)
+3.141592653589793</pre>
+<pre class="sourceCode python"><br/><span>The type of a variable is the type of the value it refers to.<br/><br/>變量的類型是它所引用的值的類型。<br/><br/></span></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;&gt;&gt; type(message)
+&lt;class 'str'&gt;
+&gt;&gt;&gt; type(n)
+&lt;class 'int'&gt;
+&gt;&gt;&gt; type(pi)
+&lt;class 'float'&gt;</pre>
+<pre class="sourceCode python"><span style="color: #ff6600;"><strong>Variable names and keywords<br/></strong></span></pre>
+<p>Programmers generally choose names for their variables that are meaningful and document what the variable is used for.</p>
+<p>Variable names can be arbitrarily long. They can contain both letters and numbers, but they cannot start with a number. It is legal to use uppercase letters, but it is a good idea to begin variable names with a lowercase letter (you'll see why later).</p>
+<pre class="sourceCode python"><br/>程序員通常會為其變量選擇有意義的名稱，並記錄該變量的用途。<br/><br/>變量名可以任意長。 它們可以包含字母和數字，但不能以數字開頭。 使用大寫字母是合法的，但以小寫字<br/>母開頭的變量名是一個好主意（稍後您會看到原因）。<br/><br/></pre>
+<p>The underscore character (<code>_</code>) can appear in a name. It is often used in names with multiple words, such as<span> </span><code>my_name</code><span> </span>or<span> </span><code>airspeed_of_unladen_swallow</code>. Variable names can start with an underscore character, but we generally avoid doing this unless we are writing library code for others to use.</p>
+<p></p>
+<p>下劃線字符（_）可以出現在名稱中。 它通常用於帶有多個單詞的名稱中，例如my_name或airspeed_of_unladen_swallow。 變量名可以以下劃線字符開頭，但是除非我們正在編寫供他人使用的庫代碼，否則我們通常避免這樣做。</p>
+<p><span></span></p>
+<p><span>If you give a variable an illegal name, you get a syntax error:</span></p>
+<p><span>如果為變量指定一個非法名稱，則會出現語法錯誤：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;&gt;&gt; 76trombones = 'big parade'
+Connection to server timed out. Run trinket again to reconnect.</pre>
+<pre class="jqconsole jqconsole-blurred"></pre>
+<p><code>76trombones</code><span> </span>is illegal because it begins with a number.<span> </span><code>more@</code><span> </span>is illegal because it contains an illegal character,<span> </span><code>@</code>. But what's wrong with<span> </span><code>class</code>?</p>
+<p>It turns out that<span> </span><code>class</code><span> </span>is one of Python's<span> </span><em>keywords</em>. The interpreter uses keywords to recognize the structure of the program, and they cannot be used as variable names.</p>
+<pre class="sourceCode python"><br/>76trombones是非法的，因為它以數字開頭。 more @是非法的，因為它包含非法字符@。 但是上課怎麼了？<br/><br/>事實證明，類是Python的關鍵字之一。 解釋器使用關鍵字來識別程序的結構，並且它們不能用作變量名。<br/><br/><br/></pre>
+<pre class="sourceCode python"><span>Python reserves 33 keywords:<br/></span></pre>
+<pre><code>and       del       from      None      True
+as        elif      global    nonlocal  try
+assert    else      if        not       while
+break     except    import    or        with
+class     False     in        pass      yield
+continue  finally   is        raise
+def       for       lambda    return</code></pre>
+<pre></pre>
+<p></p>
+<p>You might want to keep this list handy. If the interpreter complains about one of your variable names and you don't know why, see if it is on this list.</p>
+<p>您可能希望保留此列表。 如果解釋器抱怨您的變量名之一而您不知道為什麼，請查看它是否在此列表中。</p>
+<p></p>
+<p><strong><span style="color: #ff6600;">Statements</span></strong></p>
+<p><strong><span style="color: #ff6600;"></span></strong></p>
+<p>A<span> </span><em>statement</em><span> </span>is a unit of code that the Python interpreter can execute. We have seen two kinds of statements: print being an expression statement and assignment.</p>
+<p></p>
+<p>When you type a statement in interactive mode, the interpreter executes it and displays the result, if there is one.</p>
+<p>A script usually contains a sequence of statements. If there is more than one statement, the results appear one at a time as the statements execute.</p>
+<p></p>
+<p>語句是Python解釋器可以執行的代碼單位。 我們已經看到了兩種語句：print是表達式語句和賦值。</p>
+<p>在交互模式下鍵入語句時，解釋器將執行該語句並顯示結果（如果有）。</p>
+<p>腳本通常包含一系列語句。 如果有多個語句，則在執行這些語句時，結果一次出現一個。</p>
+<p></p>
+<pre class="sourceCode python"><span>For example, the script</span></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print(1)
+x = 2
+print(x)</pre>
+<pre class="sourceCode python"><span>produces the output</span><br/><br/></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">1
+2</pre>
+<pre><span>The assignment statement produces no output.</span><br/>賦值語句不產生任何輸出。<br/><br/><br/><strong><span style="color: #ff6600;">Operators and operands<br/><br/></span></strong><br/>to be continued...<br/><br/></pre>
 <p><code></code></p>
 <p><code></code></p>
 <p><code></code></p>
