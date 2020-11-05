@@ -235,7 +235,55 @@ print(x)</pre>
 <pre class="sourceCode python"><span>produces the output</span><br/><br/></pre>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">1
 2</pre>
-<pre><span>The assignment statement produces no output.</span><br/>賦值語句不產生任何輸出。<br/><br/><br/><strong><span style="color: #ff6600;">Operators and operands<br/><br/></span></strong><br/>to be continued...<br/><br/></pre>
+<pre><span>The assignment statement produces no output.</span><br/>賦值語句不產生任何輸出。<br/><br/><br/><strong><span style="color: #ff6600;">Operators and operands<br/><br/></span></strong></pre>
+<p><em>Operators</em><span> </span>are special symbols that represent computations like addition and multiplication. The values the operator is applied to are called<span> </span><em>operands</em>.</p>
+<p>The operators<span> </span><code>+</code>,<span> </span><code>-</code>,<span> </span><code>*</code>,<span> </span><code>/</code>, and<span> </span><code>**</code><span> </span>perform addition, subtraction, multiplication, division, and exponentiation, as in the following examples:</p>
+<p>運算符是特殊的符號，代表加法和乘法之類的計算。 應用該運算符的值稱為操作數。</p>
+<p>運算符+，-，*，/和**執行加，減，乘，除和乘冪運算，如以下示例所示：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">20+32   hour-1   hour*60+minute   minute/60   5**2   (5+9)*(15-7)</pre>
+<pre class="sourceCode python"><span>There has been a change in the division operator between Python 2.x and Python 3.x. <br/>In Python 3.x, the result of this division is a floating point result:</span><br/><br/>Python 2.x和Python 3.x之間的除法運算符有所變化。 在Python 3.x中，此除法的結果是浮點結果：</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;&gt;&gt; minute = 59
+&gt;&gt;&gt; minute/60
+0.9833333333333333
+&gt;&gt;&gt; 
+</pre>
+<pre class="jqconsole jqconsole-blurred"><span>The division operator in Python 2.0 would divide two integers and truncate the result to an integer:</span><br/>Python 2.0中的除法運算符將除以兩個整數並將結果截斷為整數：</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;&gt;&gt; minute = 59
+&gt;&gt;&gt; minute/60
+0
+</pre>
+<pre class="sourceCode python"><span>To obtain the same answer in Python 3.0 use floored ( // integer) division.</span><br/>要在Python 3.0中獲得相同的答案，請使用樓板（//整數）除法。</pre>
+<pre class="jqconsole jqconsole-blurred"><span class="jqconsole-old-prompt"><span class="">&gt;&gt;&gt; minute = 59
+</span></span><span class="jqconsole-old-prompt"><span class="">&gt;&gt;&gt; minute//60
+</span></span><span><span class="">0
+</span></span><span class="jqconsole-prompt"><span></span><span>&gt;&gt;&gt; </span></span></pre>
+<pre class="jqconsole jqconsole-blurred"></pre>
+<p>In Python 3.0 integer division functions much more as you would expect if you entered the expression on a calculator.</p>
+<p>在Python 3.0中，整數除法功能要比在計算器上輸入表達式所期望的要多得多。</p>
+<p></p>
+<p><strong><span style="color: #ff6600;">Expressions</span></strong></p>
+<p><strong><span style="color: #ff6600;"></span></strong></p>
+<p>An <em>expression</em> is a combination of values, variables, and operators. A value all by itself is considered an expression, and so is a variable, so the following are all legal expressions (assuming that the variable <code>x</code> has been assigned a value):</p>
+<p>表達式是值，變量和運算符的組合。 一個值本身就被認為是一個表達式，一個變量也被認為是表達式，因此以下是所有合法表達式（假設變量x被分配了一個值）：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">17
+x
+x + 17</pre>
+<pre class="sourceCode python"><span>If you type an expression in interactive mode, the interpreter </span><em>evaluates</em><span><span> </span>it and displays the result:<br/><br/></span>如果以交互方式鍵入表達式，則解釋器將對其求值並顯示結果：</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&gt;&gt;&gt; 1 + 1
+2</pre>
+<p>But in a script, an expression all by itself doesn't do anything! This is a common source of confusion for beginners.</p>
+<p>Exercise 1: Type the following statements in the Python interpreter to see what they do:</p>
+<p>但是在腳本中，表達式本身並不能執行任何操作！ 這是初學者普遍感到困惑的原因。</p>
+<p>練習1：在Python解釋器中鍵入以下語句以查看其作用：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">5
+x = 5
+x + 1</pre>
+<pre class="sourceCode python"><br/><strong><span style="color: #ff6600;">Order of orperations<br/><br/></span></strong>When more than one operator appears in an expression,<br/> the order of evaluation depends on the <em>rules of <br/>precedence</em>. For mathematical operators, Python follows<br/> mathematical convention. The acronym <em>PEMDAS</em> is a <br/>useful way to remember the rules:<br/><br/>當一個表達式中出現多個運算符時，計算順序取決於優先級規則。 <br/>對於數學運算符，Python遵循數學慣例。 縮寫PEMDAS是記住規則的有用方法：<br/><br/><em>1 P</em><span>arentheses have the highest precedence and can be used to force<br/>  an expression to evaluate in the order you want. Since expressions<br/>  in parentheses are evaluated first,<span> </span></span><code>2 * (3-1)</code><span><span> </span>is 4, and<span> </span></span><code>(1+1)**(5-2)<br/></code><span><span>  </span>is 8. You can also use parentheses to make an expression easier to<br/>  read, as in<span> </span></span><code>(minute * 100) / 60</code><span>, even if it doesn't change the result.<br/><br/>  括號的優先級最高，可用於強製表達式按所需順序求值。 由於首先計算括號中的表達式<br/>  ，因此2 *（3-1）為4，而（1 + 1）**（5-2）為8。您也可以使用括號使表達式更易於<br/>  閱讀，如（ 分鐘* 100）/ 60，即使它不會更改結果。<br/><br/><em><br/>2 E</em><span>xponentiation has the next highest precedence, so<span> </span></span><code>2**1+1</code><span><span> </span>is 3, not 4, <br/>  and<span> </span></span><code>3*1**3</code><span><span> </span>is 3, not 27.<br/><br/>  冪運算的優先級次高，因此2 ** 1 + 1是3，而不是4，而3 * 1 ** 3是3，而不是27。</span></span></pre>
+<pre class="sourceCode python"><em><br/>3 M</em><span>ultiplication and<span> </span></span><em>D</em><span>ivision have the same precedence, which is higher<br/>  than<span> </span></span><em>A</em><span>ddition and<span> </span></span><em>S</em><span>ubtraction, which also have the same precedence. <br/>  So<span> </span></span><code>2*3-1</code><span><span> </span>is 5, not 4, and<span> </span></span><code>6+4/2</code><span><span> </span>is 8.0, not 5.<br/><br/>  乘法和除法的優先級相同，高於加法和減法的優先級。 所以2 * 3-1是5，不是4，而<br/>  6 + 4/2是8.0，不是5。</span><br/><br/></pre>
+<pre class="sourceCode python"><span>4 Operators with the same precedence are evaluated from left to right. <br/>  So the expression </span><code>5-3-1</code><span><span> </span>is 1, not 3, because the<span> </span></span><code>5-3</code><span><span> </span>happens first <br/>  and then<span> </span></span><code>1</code><span><span> </span>is subtracted from<span> </span></span><code>2</code><span>.</span><br/><br/></pre>
+<pre class="sourceCode python">  優先級相同的運算符從左到右進行評估。 因此表達式5-3-1是1，而不是3，因為5-3<br/>  首先出現，然後從2中減去1。<br/><br/><span>When in doubt, always put parentheses in your expressions to make sure<br/> the computations are performed in the order you intend.<br/><br/>如有疑問，請始終在表達式中加上括號以確保計算按照您期望的順序執行。</span></pre>
+<pre class="jqconsole jqconsole-blurred"></pre>
+<pre></pre>
 <p><code></code></p>
 <p><code></code></p>
 <p><code></code></p>
