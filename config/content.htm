@@ -159,124 +159,16 @@
 <p>bs4: <a href="https://readthedocs.org/projects/beautiful-soup-4/downloads/pdf/latest/">https://readthedocs.org/projects/beautiful-soup-4/downloads/pdf/latest/</a> </p>
 <p>解題參考:<span> </span><a href="https://www.kaggle.com/mdecourse/cp2020-hw2">https://www.kaggle.com/mdecourse/cp2020-hw2</a> </p>
 <h2>2-1 取得一甲分組數列</h2>
-<p>目前的進度</p>
 <p><a href="https://www.kaggle.com/xiefanjun/cp2020-hw2-40923250">https://www.kaggle.com/xiefanjun/cp2020-hw2-40923250</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
-url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
-cp1b = []
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0772"
+cp1a = []
 for line in urllib.request.urlopen(url):
-    cp1b.append(int(line.decode('utf-8').rstrip()))
-print(url)</pre>
-<p>但會出現</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">---------------------------------------------------------------------------
-gaierror                                  Traceback (most recent call last)
-/opt/conda/lib/python3.7/urllib/request.py in do_open(self, http_class, req, **http_conn_args)
-   1318                 h.request(req.get_method(), req.selector, req.data, headers,
--&gt; 1319                           encode_chunked=req.has_header('Transfer-encoding'))
-   1320             except OSError as err: # timeout error
-
-/opt/conda/lib/python3.7/http/client.py in request(self, method, url, body, headers, encode_chunked)
-   1251         """Send a complete request to the server."""
--&gt; 1252         self._send_request(method, url, body, headers, encode_chunked)
-   1253 
-
-/opt/conda/lib/python3.7/http/client.py in _send_request(self, method, url, body, headers, encode_chunked)
-   1297             body = _encode(body, 'body')
--&gt; 1298         self.endheaders(body, encode_chunked=encode_chunked)
-   1299 
-
-/opt/conda/lib/python3.7/http/client.py in endheaders(self, message_body, encode_chunked)
-   1246             raise CannotSendHeader()
--&gt; 1247         self._send_output(message_body, encode_chunked=encode_chunked)
-   1248 
-
-/opt/conda/lib/python3.7/http/client.py in _send_output(self, message_body, encode_chunked)
-   1025         del self._buffer[:]
--&gt; 1026         self.send(msg)
-   1027 
-
-/opt/conda/lib/python3.7/http/client.py in send(self, data)
-    965             if self.auto_open:
---&gt; 966                 self.connect()
-    967             else:
-
-/opt/conda/lib/python3.7/http/client.py in connect(self)
-   1413 
--&gt; 1414             super().connect()
-   1415 
-
-/opt/conda/lib/python3.7/http/client.py in connect(self)
-    937         self.sock = self._create_connection(
---&gt; 938             (self.host,self.port), self.timeout, self.source_address)
-    939         self.sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
-
-/opt/conda/lib/python3.7/socket.py in create_connection(address, timeout, source_address)
-    706     err = None
---&gt; 707     for res in getaddrinfo(host, port, 0, SOCK_STREAM):
-    708         af, socktype, proto, canonname, sa = res
-
-/opt/conda/lib/python3.7/socket.py in getaddrinfo(host, port, family, type, proto, flags)
-    751     addrlist = []
---&gt; 752     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-    753         af, socktype, proto, canonname, sa = res
-
-gaierror: [Errno -3] Temporary failure in name resolution
-
-During handling of the above exception, another exception occurred:
-
-URLError                                  Traceback (most recent call last)
-&lt;ipython-input-1-8d29f957c386&gt; in &lt;module&gt;
-      5 target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762"
-      6 cp1a = []
-----&gt; 7 for line in urllib.request.urlopen(target_url):
-      8     cp1a.append(line.decode('utf-8'))
-      9     #print(line.decode('utf-8'), end = "") #utf-8 or iso8859-1 or whatever the page encoding scheme is
-
-/opt/conda/lib/python3.7/urllib/request.py in urlopen(url, data, timeout, cafile, capath, cadefault, context)
-    220     else:
-    221         opener = _opener
---&gt; 222     return opener.open(url, data, timeout)
-    223 
-    224 def install_opener(opener):
-
-/opt/conda/lib/python3.7/urllib/request.py in open(self, fullurl, data, timeout)
-    523             req = meth(req)
-    524 
---&gt; 525         response = self._open(req, data)
-    526 
-    527         # post-process response
-
-/opt/conda/lib/python3.7/urllib/request.py in _open(self, req, data)
-    541         protocol = req.type
-    542         result = self._call_chain(self.handle_open, protocol, protocol +
---&gt; 543                                   '_open', req)
-    544         if result:
-    545             return result
-
-/opt/conda/lib/python3.7/urllib/request.py in _call_chain(self, chain, kind, meth_name, *args)
-    501         for handler in handlers:
-    502             func = getattr(handler, meth_name)
---&gt; 503             result = func(*args)
-    504             if result is not None:
-    505                 return result
-
-/opt/conda/lib/python3.7/urllib/request.py in https_open(self, req)
-   1360         def https_open(self, req):
-   1361             return self.do_open(http.client.HTTPSConnection, req,
--&gt; 1362                 context=self._context, check_hostname=self._check_hostname)
-   1363 
-   1364         https_request = AbstractHTTPHandler.do_request_
-
-/opt/conda/lib/python3.7/urllib/request.py in do_open(self, http_class, req, **http_conn_args)
-   1319                           encode_chunked=req.has_header('Transfer-encoding'))
-   1320             except OSError as err: # timeout error
--&gt; 1321                 raise URLError(err)
-   1322             r = h.getresponse()
-   1323         except:
-
-URLError: &lt;urlopen error [Errno -3] Temporary failure in name resolution&gt;</pre>
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)
+print("共" + str(len(cp1a)) + "筆")</pre>
 <p></p>
-<h2>2-2 是否有人加退選</h2>
+<p></p><h2>2-2 是否有人加退選</h2>
 <p><span style="color: #ff0000;">I'm stuck!</span></p>
 <h2>2-3 產生W3網頁html</h2>
 <p><span style="color: #ff0000;">I'm stuck!</span></p>
