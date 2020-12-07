@@ -134,14 +134,19 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">HW2 << <a href='HW2.html'>Previous</a> <a href='2-2 是否有人加退選.html'>Next</a> >> 2-2 是否有人加退選<br /><h1>2-1 取得一甲分組數列</h1>
-<p><a href="https://www.kaggle.com/xiefanjun/cp2020-hw2-40923250">https://www.kaggle.com/xiefanjun/cp2020-hw2-40923250</a></p>
+<p><a href="https://www.kaggle.com/xiefanjun/w13-ex1-py">https://www.kaggle.com/xiefanjun/w13-ex1-py</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
-url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0772"
-cp1a = []
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1b = []
 for line in urllib.request.urlopen(url):
-    cp1a.append(int(line.decode('utf-8').rstrip()))
-print(cp1a)
-print("共" + str(len(cp1a)) + "筆")</pre>
+    cp1b.append(int(line.decode('utf-8').rstrip()))
+print(cp1b)
+print("共" + str(len(cp1b)) + "筆")
+#print("https://github.com/" + str(cp1b) + "/cp2020" /n)
+def site(num):
+    print("https://github.com/" + str(num) + "/cp2020")
+for num in cp1b:
+    site(num)</pre>
 <p></p>
 <p></p><br />HW2 << <a href='HW2.html'>Previous</a> <a href='2-2 是否有人加退選.html'>Next</a> >> 2-2 是否有人加退選</div>
         
