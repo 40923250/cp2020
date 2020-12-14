@@ -134,7 +134,30 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">2-2 是否有人加退選 << <a href='2-2 是否有人加退選.html'>Previous</a> <a href='學習日記.html'>Next</a> >> 學習日記<br /><h1>2-3 產生W3網頁html</h1>
-<p><span style="color: #ff0000;">I'm stuck!</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#繼2-1
+import urllib.request
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1a = []
+for line in urllib.request.urlopen(url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)
+print("共" + str(len(cp1a)) + "筆")
+#帶入陳述句
+def site(num):
+    print("https://github.com/" + str(num) + "/cp2020")
+#將cp1a的數帶入陳述句
+for num in cp1a:
+    site(num)</pre>
+<br/><img alt="" height="500" src="./../images/SciTE_Y32WUCnOtj.png" width="684"/><br/>Hw3
+<p>14.<span>:</span><a href="https://www.practicepython.org/exercise/2014/05/15/14-list-remove-duplicates.html">List Remove Duplicates</a></p>
+<p><span>15:</span><span> </span><a href="https://www.practicepython.org/exercise/2014/05/21/15-reverse-word-order.html">Reverse Word Order</a></p>
+<p><span>16:</span><span> </span><a href="https://www.practicepython.org/exercise/2014/05/28/16-password-generator.html">Password Generator</a></p>
+<br/>14.<span>:</span><a href="https://www.practicepython.org/exercise/2014/05/15/14-list-remove-duplicates.html">List Remove Duplicates</a>
+<p>0</p>
+<br/><span>15:</span><span> </span><a href="https://www.practicepython.org/exercise/2014/05/21/15-reverse-word-order.html">Reverse Word Order</a>
+<p>1</p>
+<br/><span>16:</span><span> </span><a href="https://www.practicepython.org/exercise/2014/05/28/16-password-generator.html">Password Generator</a>
+<p>2</p>
 <br />2-2 是否有人加退選 << <a href='2-2 是否有人加退選.html'>Previous</a> <a href='學習日記.html'>Next</a> >> 學習日記</div>
         
     <!-- footer -->

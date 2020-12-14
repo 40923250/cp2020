@@ -159,20 +159,39 @@
 <p>bs4: <a href="https://readthedocs.org/projects/beautiful-soup-4/downloads/pdf/latest/">https://readthedocs.org/projects/beautiful-soup-4/downloads/pdf/latest/</a> </p>
 <p>解題參考:<span> </span><a href="https://www.kaggle.com/mdecourse/cp2020-hw2">https://www.kaggle.com/mdecourse/cp2020-hw2</a> </p>
 <h2>2-1 取得一甲分組數列</h2>
-<p><a href="https://www.kaggle.com/xiefanjun/cp2020-hw2-40923250">https://www.kaggle.com/xiefanjun/cp2020-hw2-40923250</a></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
-url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0772"
+<p><a href="https://www.kaggle.com/xiefanjun/w13-ex1-py">https://www.kaggle.com/xiefanjun/w13-ex1-py</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#導入urllib.request
+import urllib.request
+#目標url
+url = "https://nfulist.herokuapp.com/?
+semester=1091&amp;courseno=0776"
+#設cp1a為空括弧
+cp1a = []
+#打開url，並用.rstrip取消/n
+for line in urllib.request.urlopen(url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+#列出cp1a內容
+print(cp1a)
+#列出共幾筆
+print("共" + str(len(cp1a)) + "筆")</pre>
+<p></p>
+<p></p><h2>2-2 是否有人加退選</h2>
+<p><span style="color: #ff0000;">I don't know!</span></p><h2>2-3 產生W3網頁html</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#繼2-1
+import urllib.request
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
 cp1a = []
 for line in urllib.request.urlopen(url):
     cp1a.append(int(line.decode('utf-8').rstrip()))
 print(cp1a)
-print("共" + str(len(cp1a)) + "筆")</pre>
-<p></p>
-<p></p><h2>2-2 是否有人加退選</h2>
-<p><span style="color: #ff0000;">I'm stuck!</span></p>
-<h2>2-3 產生W3網頁html</h2>
-<p><span style="color: #ff0000;">I'm stuck!</span></p>
-<h1>學習日記</h1>
+print("共" + str(len(cp1a)) + "筆")
+#帶入陳述句
+def site(num):
+    print("https://github.com/" + str(num) + "/cp2020")
+#將cp1a的數帶入陳述句
+for num in cp1a:
+    site(num)</pre>
+<p><img alt="" height="500" src="/images/SciTE_Y32WUCnOtj.png" width="684"/><br/><br/></p><h1>學習日記</h1>
 <p><img alt="" height="503" src="/images/RxSRc8H.png" width="500"/></p>
 <p>1.git clone</p>
 <p>2.刪除submodule</p>
