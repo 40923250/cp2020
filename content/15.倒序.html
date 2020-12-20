@@ -133,13 +133,35 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Hw1.html'>Next</a> >> Hw1<br /><h1>First</h1>
-<p>40923250-kaggle:<a href="https://www.kaggle.com/xiefanjun/cp2020w7">https://www.kaggle.com/xiefanjun/cp2020w7</a></p>
-<p>40923250-gitlab:<a href="https://gitlab.com/409232501/cp2020">https://gitlab.com/409232501/cp2020</a></p>
-<p></p>
-<p><br/><br/></p>
-<p><img alt="" height="1333" src="./../images/a5016cc9d5559fff8cc011aadd3cc7bb.jpg" width="1000"/></p>
-<br /> <a href='Hw1.html'>Next</a> >> Hw1</div>
+    <div id="tipue_search_content">14.移除重複項 << <a href='14.移除重複項.html'>Previous</a> <a href='16.密碼生成器.html'>Next</a> >> 16.密碼生成器<br /><h1>15.倒序</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#列出一字串
+w = "there is a pig"
+#拆了他
+#字串.split("這裡填用以分割的字")可以以括弧中的字分割字串
+print(w.split())
+
+#方法1
+w = "there is a pig"
+A = w.split()
+A.reverse()
+print(A)
+
+print("------")
+#方法2
+# Reversing a list	
+#Syntax: A = w[start:stop:step]
+#但我不知道為啥會整個倒過來...
+w = "there is a pig"
+A = w.split()
+A = w[::-1]
+print(A)
+
+print("------")
+#方法3
+w = "there is a pig"
+A = w.split()
+for B in reversed(A):
+    print(B)</pre><br />14.移除重複項 << <a href='14.移除重複項.html'>Previous</a> <a href='16.密碼生成器.html'>Next</a> >> 16.密碼生成器</div>
         
     <!-- footer -->
       <div class="container">

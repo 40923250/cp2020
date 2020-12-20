@@ -193,13 +193,66 @@ def site(num):
 #將cp1a的數帶入陳述句
 for num in cp1a:
     site(num)</pre>
-<br/><br/><img alt="" height="500" src="/images/SciTE_Y32WUCnOtj.png" width="684"/>
+<p><br/><br/><img alt="" height="500" src="/images/SciTE_Y32WUCnOtj.png" width="684"/></p>
 <h1>Hw3</h1>
 <p>14.<span>:</span><a href="https://www.practicepython.org/exercise/2014/05/15/14-list-remove-duplicates.html">List Remove Duplicates</a></p>
+<p>      移除重複項</p>
 <p><span>15:</span><span> </span><a href="https://www.practicepython.org/exercise/2014/05/21/15-reverse-word-order.html">Reverse Word Order</a></p>
+<p>      倒序</p>
 <p><span>16:</span><span> </span><a href="https://www.practicepython.org/exercise/2014/05/28/16-password-generator.html">Password Generator</a></p>
-<br/>14.<span>:</span><a href="https://www.practicepython.org/exercise/2014/05/15/14-list-remove-duplicates.html">List Remove Duplicates</a><br/><span>15:</span><span> </span><a href="https://www.practicepython.org/exercise/2014/05/21/15-reverse-word-order.html">Reverse Word Order</a>
-<br/><span>16:</span><span> </span><a href="https://www.practicepython.org/exercise/2014/05/28/16-password-generator.html">Password Generator</a><h1>學習日記</h1>
+<p>      密碼生成器</p>
+<h2>14.移除重複項</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#設一有重複物件的列表
+T01 = [0,1,2,0,5,8,6,7,63,45,15,1,4,5,6,]
+print(T01)
+#用set()使列表轉換集合，並去除重複項，再用list()轉換為列表
+T01 = set(T01)
+T01 = list(T01)
+print(T01)
+#用sorted對數字進行排列
+To1 = sorted(T01)
+print(sorted(T01))</pre>
+<br/><br/><br/>15.倒序
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#列出一字串
+w = "there is a pig"
+#拆了他
+#字串.split("這裡填用以分割的字")可以以括弧中的字分割字串
+print(w.split())
+
+#方法1
+w = "there is a pig"
+A = w.split()
+A.reverse()
+print(A)
+
+print("------")
+#方法2
+# Reversing a list	
+#Syntax: A = w[start:stop:step]
+#但我不知道為啥會整個倒過來...
+w = "there is a pig"
+A = w.split()
+A = w[::-1]
+print(A)
+
+print("------")
+#方法3
+w = "there is a pig"
+A = w.split()
+for B in reversed(A):
+    print(B)</pre>
+<h2>16.密碼生成器</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#導入隨機
+import random
+#設一字串當做隨機樣本
+s = "0123456789ABCDEFGHIJKLMNPQRTUVWXYZabcdefghijklmnpqrtuvwxyz"
+#設一int當作密碼長度
+passlen = 8
+#設一空字串，並加入隨機樣本和樣本數
+P = "".join(random.sample(s,passlen))
+print(P)</pre>
+<p></p>
+<h1>學習日記</h1>
 <p><img alt="" height="503" src="/images/RxSRc8H.png" width="500"/></p>
 <p>1.git clone</p>
 <p>2.刪除submodule</p>
