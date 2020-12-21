@@ -134,6 +134,58 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">14.移除重複項 << <a href='14.移除重複項.html'>Previous</a> <a href='16.密碼生成器.html'>Next</a> >> 16.密碼生成器<br /><h1>15.倒序</h1>
+<p><strong>Reverse Word Order <img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/> <img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/> <img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></strong></p>
+<div><i>strings</i></div>
+<p><strong>Exercise 15 (and <a href="https://www.practicepython.org/solution/2014/05/28/15-reverse-word-order-solutions.html">Solution</a>)</strong></p>
+<p>Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">My</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">Michele</span></code></pre>
+</figure>
+<p>Then I would see the string:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">Michele</span> <span class="ow">is</span> <span class="n">name</span> <span class="n">My</span></code></pre>
+</figure>
+<p>shown back to me.</p>
+<p><strong>Discussion</strong></p>
+<p>Concepts for this week:</p>
+<ul>
+<li>More string things</li>
+</ul>
+<p><strong>More string things</strong></p>
+<p>Python has a lot of interesting things you can do with strings. I will show a few here, but you can see many more methods that may or may not be useful at the<span> </span><a href="https://docs.python.org/3.3/library/stdtypes.html?highlight=strings#string-methods">official Python documentation about the string format</a>.</p>
+<p>Remember that<span> </span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html">strings are lists</a>.</p>
+<p><strong>Splitting strings</strong></p>
+<p>You can “split” or tear apart strings based on a given set of characters. For example:</p>
+<figure class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">teststring = "this is a test"
+  result = teststring.split("t")</pre>
+</figure>
+<p>And at the end,<span> </span><code class="highlighter-rouge">result</code><span> </span>will contain the list:</p>
+<figure class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">['', 'his is a ', 'es', '']</pre>
+</figure>
+<p>Instead of<span> </span><code class="highlighter-rouge">"t"</code>, you can write any character you want. If you do not include any character, it means “split on all whitespace”:</p>
+<figure class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">  teststring = "  this      has a lot    of   spaces and    tabs"
+  result = testring.split()</pre>
+<pre><br/><br/></pre>
+</figure>
+<p>Then<span> </span><code class="highlighter-rouge">result</code><span> </span>contains:</p>
+<figure class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"> ['this', 'has', 'a', 'lot', 'of', 'spaces', 'and', 'tabs']</pre>
+</figure>
+<p><strong>Joining strings</strong></p>
+<p>You can also relatively easily “join” or “smush” strings together:</p>
+<figure class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">listofstrings = ['a', 'b', 'c']
+  result = "**".join(listofstrings)</pre>
+</figure>
+<p>Then<span> </span><code class="highlighter-rouge">result</code><span> </span>will contain the string:</p>
+<figure class="highlight">
+<pre><code class="language-pycon" data-lang="pycon">  a**b**c</code></pre>
+</figure>
+<p>Take a look at the official Python documentation for more information.</p>
+<p><strong>Ans.</strong></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">#列出一字串
 w = "there is a pig"
 #拆了他
@@ -161,7 +213,8 @@ print("------")
 w = "there is a pig"
 A = w.split()
 for B in reversed(A):
-    print(B)</pre><br />14.移除重複項 << <a href='14.移除重複項.html'>Previous</a> <a href='16.密碼生成器.html'>Next</a> >> 16.密碼生成器</div>
+    print(B)</pre>
+<p><img alt="" height="553" src="./../images/SciTE_Frq1xdv1gg.png" width="500"/></p><br />14.移除重複項 << <a href='14.移除重複項.html'>Previous</a> <a href='16.密碼生成器.html'>Next</a> >> 16.密碼生成器</div>
         
     <!-- footer -->
       <div class="container">
